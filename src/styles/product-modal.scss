@@ -1,0 +1,47 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(0 0 0 / 55%);
+}
+
+.product-modal {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: min(600px, 100%);
+  padding: 32px;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.product-modal img {
+  width: 100%;
+  align-self: center;
+  object-fit: contain;
+}
+
+.product-modal__close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.product-modal__price {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@media (max-width: 520px) {
+  .product-modal {
+    grid-template-columns: 1fr;
+  }
+}
