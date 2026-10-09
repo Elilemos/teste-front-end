@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import type { Product, ProductsResponse } from './types/product';
+import type { Product, ProductResponse } from './types/product';
 import { ProductSection } from './components/ProductSection';
 import { ProductModal } from './components/ProductModal';
 import { SiteHeader } from './components/SiteHeader';
@@ -29,7 +29,7 @@ function App() {
           throw new Error('Não foi possível buscar os produtos.');
         }
 
-        const data: ProductsResponse = await response.json();
+        const data: ProductResponse = await response.json();
 
         if (!data.success) {
           throw new Error('A API não conseguiu carregar os produtos.');
